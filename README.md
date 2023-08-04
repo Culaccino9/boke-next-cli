@@ -26,13 +26,18 @@ npm run build:uat
 
 # router
 
--- src -- enums // 路由枚举
-
-- -routes // 路由文件 -- hooks -- useRouterList // 路由规则过滤
+- src
+  - enums // 路由枚举
+  - routes // 路由文件
+  - hooks
+    - useRouterList // 路由规则过滤
 
 # 配置文件
 
--- config -- seo // seo优化 -- theme // Material Tailwind 主题皮肤 -- layout // 默认baseLayout的配置详见ts文件配置项
+- config
+  - seo // seo优化
+  - theme // Material Tailwind 主题皮肤
+  - layout // 默认baseLayout的配置详见ts文件配置项
 
 # 环境变量
 
