@@ -1,25 +1,63 @@
 {
-  "name": "pone-next-app",
+  "name": "boke-next-cli",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "NEXT_PUBLIC_ENV=dev next dev",
+    "dev:test": "NEXT_PUBLIC_ENV=test next dev",
+    "dev:prod": "NEXT_PUBLIC_ENV=prod next dev",
+    "dev:uat": "NEXT_PUBLIC_ENV=uat next dev",
+    "build": "NEXT_PUBLIC_ENV=dev next build",
+    "build:test": "NEXT_PUBLIC_ENV=test next build",
+    "build:prod": "NEXT_PUBLIC_ENV=prod next build",
+    "build:uat": "NEXT_PUBLIC_ENV=uat next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint-staged": "lint-staged",
+    "prepare": "husky install",
+    "lint": "npm run lint:script",
+    "lint:script": "eslint . --ext .js,.jsx,.ts,.tsx --cache",
+    "lint-fix": "npm run lint-fix:script",
+    "lint-fix:script": "npm run lint:script -- --fix"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
-    "@types/node": "20.4.5",
-    "@types/react": "18.2.17",
-    "@types/react-dom": "18.2.7",
-    "autoprefixer": "10.4.14",
-    "eslint": "8.46.0",
-    "eslint-config-next": "13.4.12",
+    "@heroicons/react": "^2.0.18",
+    "@material-tailwind/react": "^2.0.8",
     "next": "13.4.12",
     "postcss": "8.4.27",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwindcss": "3.3.3",
+    "tailwindcss": "3.3.3"
+  },
+  "devDependencies": {
+    "@babel/eslint-plugin": "^7.22.5",
+    "@commitlint/config-conventional": "^17.6.6",
+    "@types/node": "20.4.5",
+    "@types/react": "18.2.17",
+    "@types/react-dom": "18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@typescript-eslint/parser": "^6.2.0",
+    "autoprefixer": "10.4.14",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.44.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-compat": "^4.1.4",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-unicorn": "^47.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.0",
     "typescript": "5.1.6"
   }
 }

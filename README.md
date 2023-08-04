@@ -1,34 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+npm run dev:test
+npm run dev:prod
+npm run dev:uat
+
+npm run build
+npm run build:test
+npm run build:prod
+npm run build:uat
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 三方库
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Material Tailwind [UI库](https://nextjs.org/docs/deployment)
+- tailwindCSS [CSS解决方案](https://www.tailwindawesome.com/)
+- heroicons/react [icon](https://www.tailwindawesome.com/)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Lint规则
 
-## Learn More
+- airbnb
 
-To learn more about Next.js, take a look at the following resources:
+# husky
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+代码检测
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# router
 
-## Deploy on Vercel
+- src
+  - enums // 路由枚举
+  - routes // 路由文件
+  - hooks
+    - useRouterList // 路由规则过滤
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# 配置文件
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- config
+- seo // seo优化
+- theme // Material Tailwind 主题皮肤
+- layout // 默认baseLayout的配置详见ts文件配置项
+
+# 环境变量
+
+.env.dev // dev 环境 .env.test // test 环境 .env.prod // prod 环境 .env.uat // uat 环境

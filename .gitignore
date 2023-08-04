@@ -4,6 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
+.next
+
 
 # testing
 /coverage
@@ -14,10 +16,18 @@
 
 # production
 /build
+/out
 
 # misc
 .DS_Store
 *.pem
+pnpm-lock.yaml
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
+yarn.lock.yaml
+package-lock.json
 
 # debug
 npm-debug.log*
