@@ -22,23 +22,21 @@ npm run build:uat
 
 # husky
 
-代码检测
+- 代码检测
 
 # router
 
-- src
-  - enums // 路由枚举
-  - routes // 路由文件
-  - hooks
-    - useRouterList // 路由规则过滤
+-- src -- enums // 路由枚举
+
+- -routes // 路由文件 -- hooks -- useRouterList // 路由规则过滤
 
 # 配置文件
 
-- config
-- seo // seo优化
-- theme // Material Tailwind 主题皮肤
-- layout // 默认baseLayout的配置详见ts文件配置项
+-- config -- seo // seo优化 -- theme // Material Tailwind 主题皮肤 -- layout // 默认baseLayout的配置详见ts文件配置项
 
 # 环境变量
 
-.env.dev // dev 环境 .env.test // test 环境 .env.prod // prod 环境 .env.uat // uat 环境
+- .env.dev // dev 环境
+- .env.test // test 环境
+- .env.prod // prod 环境
+- .env.uat // uat 环境
